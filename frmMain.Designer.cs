@@ -78,6 +78,7 @@
             this.mnuFile.Name = "mnuFile";
             this.mnuFile.Size = new System.Drawing.Size(69, 24);
             this.mnuFile.Text = "&Tệp tin";
+            this.mnuFile.Click += new System.EventHandler(this.mnuFile_Click);
             // 
             // mnuThoat
             // 

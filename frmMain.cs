@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using IronPython.Compiler.Ast;
 using IronPython.Hosting;
-
+using application_programming.Class;
 
 namespace application_programming
 {
@@ -24,13 +24,13 @@ namespace application_programming
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Class.Functions.Connect();
+            Class.Functions.Connect(); //Mở kết nối
         }
 
         private void mnuChatLieu_Click(object sender, EventArgs e)
         {
-            Class.Functions.Disconnect(); //Đóng kết nối
-            Application.Exit(); //Thoát
+            frmDMChatLieu frmChatLieu = new frmDMChatLieu(); //Khởi tạo đối tượng
+            frmChatLieu.ShowDialog(); //Hiển thị
         }
 
         private void mnuKhachHang_Click(object sender, EventArgs e)
@@ -40,12 +40,16 @@ namespace application_programming
 
         private void mnuHangHoa_Click(object sender, EventArgs e)
         {
-
+            frmDMHangHoa frmHangHoa = new frmDMHangHoa(); //Khởi tạo đối tượng
+            frmHangHoa.MdiParent = this;
+            frmHangHoa.Show(); //Hiển thị
         }
 
         private void mnuNhanVien_Click(object sender, EventArgs e)
         {
-
+            frmDMNhanVien frmNhanVien = new frmDMNhanVien(); //Khởi tạo đối tượng
+            frmNhanVien.MdiParent = this;
+            frmNhanVien.Show(); //Hiển thị
         }
 
         private void mnuDanhmuc_Click(object sender, EventArgs e)
@@ -57,6 +61,11 @@ namespace application_programming
         {
             Class.Functions.Disconnect(); //Đóng kết nối
             Application.Exit(); //Thoát
+        }
+
+        private void mnuFile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

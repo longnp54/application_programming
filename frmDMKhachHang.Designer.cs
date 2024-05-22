@@ -62,6 +62,7 @@
             this.txtMaKhach.Name = "txtMaKhach";
             this.txtMaKhach.Size = new System.Drawing.Size(206, 22);
             this.txtMaKhach.TabIndex = 8;
+            this.txtMaKhach.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMaKhach_KeyUp);
             // 
             // txtTenChatLieu
             // 
@@ -115,6 +116,7 @@
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnDong
             // 
@@ -124,6 +126,7 @@
             this.btnDong.TabIndex = 11;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnBoQua
             // 
@@ -133,6 +136,7 @@
             this.btnBoQua.TabIndex = 10;
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnLuu
             // 
@@ -142,6 +146,7 @@
             this.btnLuu.TabIndex = 9;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -151,6 +156,7 @@
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -160,6 +166,7 @@
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dgvKhachHang
             // 
@@ -170,6 +177,7 @@
             this.dgvKhachHang.RowTemplate.Height = 24;
             this.dgvKhachHang.Size = new System.Drawing.Size(724, 183);
             this.dgvKhachHang.TabIndex = 11;
+            this.dgvKhachHang.Click += new System.EventHandler(this.dgvKhachHang_Click);
             // 
             // txtDiaChi
             // 
@@ -222,6 +230,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDMKhachHang";
             this.Text = "frmDMKhachHang";
+            this.Load += new System.EventHandler(this.frmDMKhachHang_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);
