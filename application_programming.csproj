@@ -201,9 +201,9 @@
     <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Quanlybanhang.mdf">
+    <EmbeddedResource Include="Quanlybanhang.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
     <Content Include="Quanlybanhang_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Quanlybanhang.mdf</DependentUpon>
