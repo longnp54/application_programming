@@ -26,11 +26,14 @@ namespace application_programming
         {
             Class.Functions.Connect();
         }
-
-        private void mnuChatLieu_Click(object sender, EventArgs e)
+        private void mnuThoat_Click(object sender, EventArgs e)
         {
             Class.Functions.Disconnect(); //Đóng kết nối
             Application.Exit(); //Thoát
+        }
+        private void mnuChatLieu_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void mnuKhachHang_Click(object sender, EventArgs e)
@@ -53,10 +56,6 @@ namespace application_programming
             
         }
 
-        private void mnuThoat_Click(object sender, EventArgs e)
-        {
-            Class.Functions.Disconnect(); //Đóng kết nối
-            Application.Exit(); //Thoát
-        }
+        
     }
 }
