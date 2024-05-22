@@ -1,1 +1,0 @@
-ri_exel_path
