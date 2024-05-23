@@ -45,7 +45,7 @@ namespace application_programming
         private void mnuHangHoa_Click(object sender, EventArgs e)
         {
             frmDMHangHoa frmHangHoa = new frmDMHangHoa(); //Khởi tạo đối tượng
-            frmHangHoa.MdiParent = this;
+ 
             frmHangHoa.Show(); //Hiển thị
         }
 
