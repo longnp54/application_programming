@@ -272,7 +272,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "frmDMNhanVien";
-            this.Text = "frmDMNhanvien";
+            this.Text = "DANH MỤC NHÂN VIÊN";
             this.Load += new System.EventHandler(this.frmDMNhanVien_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();

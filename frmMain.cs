@@ -39,8 +39,8 @@ namespace application_programming
 
         private void mnuKhachHang_Click(object sender, EventArgs e)
         {
-            frmDMChatLieu frmHangHoa= new frmDMChatLieu(); //Khởi tạo đối tượng
-            frmHangHoa.ShowDialog(); //Hiển thị
+            frmDMKhachHang frmKhachHang = new frmDMKhachHang(); //Khởi tạo đối tượng
+            frmKhachHang.ShowDialog(); //Hiển thị
         }
 
         private void mnuHangHoa_Click(object sender, EventArgs e)
