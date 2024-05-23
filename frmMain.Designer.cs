@@ -78,6 +78,7 @@
             this.mnuFile.Name = "mnuFile";
             this.mnuFile.Size = new System.Drawing.Size(69, 24);
             this.mnuFile.Text = "&Tệp tin";
+            this.mnuFile.Click += new System.EventHandler(this.mnuFile_Click);
             // 
             // mnuThoat
             // 
@@ -102,28 +103,28 @@
             // mnuChatLieu
             // 
             this.mnuChatLieu.Name = "mnuChatLieu";
-            this.mnuChatLieu.Size = new System.Drawing.Size(169, 26);
+            this.mnuChatLieu.Size = new System.Drawing.Size(224, 26);
             this.mnuChatLieu.Text = "&Chất liệu";
             this.mnuChatLieu.Click += new System.EventHandler(this.mnuChatLieu_Click);
             // 
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(169, 26);
+            this.mnuNhanVien.Size = new System.Drawing.Size(224, 26);
             this.mnuNhanVien.Text = "Nhân viên";
             this.mnuNhanVien.Click += new System.EventHandler(this.mnuNhanVien_Click);
             // 
             // mnuKhachHang
             // 
             this.mnuKhachHang.Name = "mnuKhachHang";
-            this.mnuKhachHang.Size = new System.Drawing.Size(169, 26);
+            this.mnuKhachHang.Size = new System.Drawing.Size(224, 26);
             this.mnuKhachHang.Text = "&Khách hàng";
             this.mnuKhachHang.Click += new System.EventHandler(this.mnuKhachHang_Click);
             // 
             // mnuHangHoa
             // 
             this.mnuHangHoa.Name = "mnuHangHoa";
-            this.mnuHangHoa.Size = new System.Drawing.Size(169, 26);
+            this.mnuHangHoa.Size = new System.Drawing.Size(224, 26);
             this.mnuHangHoa.Text = "&Hàng hoá";
             this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
@@ -138,8 +139,9 @@
             // mnuHoaDonBan
             // 
             this.mnuHoaDonBan.Name = "mnuHoaDonBan";
-            this.mnuHoaDonBan.Size = new System.Drawing.Size(179, 26);
+            this.mnuHoaDonBan.Size = new System.Drawing.Size(224, 26);
             this.mnuHoaDonBan.Text = "Hoá đơn bán";
+            this.mnuHoaDonBan.Click += new System.EventHandler(this.mnuHoaDonBan_Click);
             // 
             // mnuTimKiem
             // 

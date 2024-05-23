@@ -37,10 +37,10 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtTenChatLieu = new System.Windows.Forms.Label();
-            this.txtMaChatLieu = new System.Windows.Forms.Label();
+            this.lbTenChatLieu = new System.Windows.Forms.Label();
+            this.lbMaChatLieu = new System.Windows.Forms.Label();
+            this.txtMaChatLieu = new System.Windows.Forms.TextBox();
+            this.txtTenChatLieu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvChatLieu = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -89,6 +89,7 @@
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnBoQua
             // 
@@ -98,6 +99,7 @@
             this.btnBoQua.TabIndex = 4;
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnLuu
             // 
@@ -107,6 +109,7 @@
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -116,6 +119,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -125,13 +129,14 @@
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.txtTenChatLieu);
+            this.panel2.Controls.Add(this.lbTenChatLieu);
+            this.panel2.Controls.Add(this.lbMaChatLieu);
             this.panel2.Controls.Add(this.txtMaChatLieu);
+            this.panel2.Controls.Add(this.txtTenChatLieu);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -139,37 +144,38 @@
             this.panel2.Size = new System.Drawing.Size(800, 117);
             this.panel2.TabIndex = 1;
             // 
-            // textBox2
+            // lbTenChatLieu
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 22);
-            this.textBox2.TabIndex = 4;
+            this.lbTenChatLieu.AutoSize = true;
+            this.lbTenChatLieu.Location = new System.Drawing.Point(41, 70);
+            this.lbTenChatLieu.Name = "lbTenChatLieu";
+            this.lbTenChatLieu.Size = new System.Drawing.Size(86, 16);
+            this.lbTenChatLieu.TabIndex = 6;
+            this.lbTenChatLieu.Text = "Tên chất liệu:";
             // 
-            // textBox1
+            // lbMaChatLieu
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 22);
-            this.textBox1.TabIndex = 3;
-            // 
-            // txtTenChatLieu
-            // 
-            this.txtTenChatLieu.AutoSize = true;
-            this.txtTenChatLieu.Location = new System.Drawing.Point(40, 70);
-            this.txtTenChatLieu.Name = "txtTenChatLieu";
-            this.txtTenChatLieu.Size = new System.Drawing.Size(83, 16);
-            this.txtTenChatLieu.TabIndex = 2;
-            this.txtTenChatLieu.Text = "Tên chất liệu";
+            this.lbMaChatLieu.AutoSize = true;
+            this.lbMaChatLieu.Location = new System.Drawing.Point(38, 41);
+            this.lbMaChatLieu.Name = "lbMaChatLieu";
+            this.lbMaChatLieu.Size = new System.Drawing.Size(81, 16);
+            this.lbMaChatLieu.TabIndex = 5;
+            this.lbMaChatLieu.Text = "Mã chất liệu:";
             // 
             // txtMaChatLieu
             // 
-            this.txtMaChatLieu.AutoSize = true;
-            this.txtMaChatLieu.Location = new System.Drawing.Point(39, 41);
+            this.txtMaChatLieu.Location = new System.Drawing.Point(158, 70);
             this.txtMaChatLieu.Name = "txtMaChatLieu";
-            this.txtMaChatLieu.Size = new System.Drawing.Size(78, 16);
-            this.txtMaChatLieu.TabIndex = 1;
-            this.txtMaChatLieu.Text = "Mã chất liệu";
+            this.txtMaChatLieu.Size = new System.Drawing.Size(217, 22);
+            this.txtMaChatLieu.TabIndex = 4;
+            this.txtMaChatLieu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMaChatLieu_KeyUp);
+            // 
+            // txtTenChatLieu
+            // 
+            this.txtTenChatLieu.Location = new System.Drawing.Point(158, 41);
+            this.txtTenChatLieu.Name = "txtTenChatLieu";
+            this.txtTenChatLieu.Size = new System.Drawing.Size(217, 22);
+            this.txtTenChatLieu.TabIndex = 3;
             // 
             // label1
             // 
@@ -193,6 +199,7 @@
             this.dgvChatLieu.RowTemplate.Height = 24;
             this.dgvChatLieu.Size = new System.Drawing.Size(800, 258);
             this.dgvChatLieu.TabIndex = 2;
+            this.dgvChatLieu.Click += new System.EventHandler(this.dgvChatLieu_Click);
             // 
             // frmDMChatLieu
             // 
@@ -203,7 +210,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmDMChatLieu";
-            this.Text = "Danh much chất liệu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Danh mục chất liệu";
+            this.Load += new System.EventHandler(this.frmDMChatLieu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -224,9 +233,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvChatLieu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtTenChatLieu;
-        private System.Windows.Forms.Label txtMaChatLieu;
+        private System.Windows.Forms.TextBox txtMaChatLieu;
+        private System.Windows.Forms.TextBox txtTenChatLieu;
+        private System.Windows.Forms.Label lbTenChatLieu;
+        private System.Windows.Forms.Label lbMaChatLieu;
     }
 }

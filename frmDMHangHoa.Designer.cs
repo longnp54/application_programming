@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnHienThi = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnBoQua = new System.Windows.Forms.Button();
@@ -65,6 +75,16 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnHienThi);
             this.panel1.Controls.Add(this.btnDong);
             this.panel1.Controls.Add(this.btnBoQua);
@@ -78,6 +98,96 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1032, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(933, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(69, 23);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(831, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(69, 23);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(723, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(69, 23);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(620, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 23);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(522, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(69, 23);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(421, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(69, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(305, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(69, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(201, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(69, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(103, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "&Thêm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnHienThi
             // 
@@ -181,7 +291,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1032, 310);
             this.panel2.TabIndex = 1;
@@ -189,7 +299,7 @@
             // txtDonGiaBan
             // 
             this.txtDonGiaBan.Location = new System.Drawing.Point(165, 272);
-            this.txtDonGiaBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGiaBan.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGiaBan.Name = "txtDonGiaBan";
             this.txtDonGiaBan.Size = new System.Drawing.Size(132, 22);
             this.txtDonGiaBan.TabIndex = 18;
@@ -198,7 +308,7 @@
             // txtDonGiaNhap
             // 
             this.txtDonGiaNhap.Location = new System.Drawing.Point(165, 222);
-            this.txtDonGiaNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGiaNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGiaNhap.Name = "txtDonGiaNhap";
             this.txtDonGiaNhap.Size = new System.Drawing.Size(132, 22);
             this.txtDonGiaNhap.TabIndex = 17;
@@ -207,7 +317,7 @@
             // btnMo
             // 
             this.btnMo.Location = new System.Drawing.Point(675, 55);
-            this.btnMo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMo.Margin = new System.Windows.Forms.Padding(4);
             this.btnMo.Name = "btnMo";
             this.btnMo.Size = new System.Drawing.Size(52, 28);
             this.btnMo.TabIndex = 16;
@@ -217,9 +327,9 @@
             // picAnh
             // 
             this.picAnh.Location = new System.Drawing.Point(735, 43);
-            this.picAnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picAnh.Margin = new System.Windows.Forms.Padding(4);
             this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(232, 198);
+            this.picAnh.Size = new System.Drawing.Size(193, 198);
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAnh.TabIndex = 15;
             this.picAnh.TabStop = false;
@@ -227,7 +337,7 @@
             // txtGhiChu
             // 
             this.txtGhiChu.Location = new System.Drawing.Point(511, 135);
-            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(153, 61);
@@ -236,7 +346,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(511, 52);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(153, 58);
@@ -285,7 +395,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(165, 181);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 8;
@@ -315,7 +425,7 @@
             // 
             this.cbxMaChatLieu.FormattingEnabled = true;
             this.cbxMaChatLieu.Location = new System.Drawing.Point(165, 135);
-            this.cbxMaChatLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxMaChatLieu.Margin = new System.Windows.Forms.Padding(4);
             this.cbxMaChatLieu.Name = "cbxMaChatLieu";
             this.cbxMaChatLieu.Size = new System.Drawing.Size(132, 24);
             this.cbxMaChatLieu.TabIndex = 5;
@@ -323,7 +433,7 @@
             // txtTenHang
             // 
             this.txtTenHang.Location = new System.Drawing.Point(165, 91);
-            this.txtTenHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenHang.Name = "txtTenHang";
             this.txtTenHang.Size = new System.Drawing.Size(132, 22);
             this.txtTenHang.TabIndex = 4;
@@ -331,7 +441,7 @@
             // txtMaHang
             // 
             this.txtMaHang.Location = new System.Drawing.Point(165, 43);
-            this.txtMaHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHang.Name = "txtMaHang";
             this.txtMaHang.Size = new System.Drawing.Size(132, 22);
             this.txtMaHang.TabIndex = 3;
@@ -375,7 +485,7 @@
             this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHangHoa.Location = new System.Drawing.Point(0, 310);
-            this.dgvHangHoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHangHoa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHangHoa.Name = "dgvHangHoa";
             this.dgvHangHoa.RowHeadersWidth = 51;
             this.dgvHangHoa.Size = new System.Drawing.Size(1032, 210);
@@ -433,5 +543,15 @@
         private System.Windows.Forms.Label LabelAnh;
         private System.Windows.Forms.TextBox txtDonGiaBan;
         private System.Windows.Forms.TextBox txtDonGiaNhap;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

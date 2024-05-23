@@ -30,14 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.cboMaHD = new System.Windows.Forms.ComboBox();
+            this.cboMaHDBan = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboMaKhach = new System.Windows.Forms.ComboBox();
             this.txtDienThoai = new System.Windows.Forms.MaskedTextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenKhach = new System.Windows.Forms.TextBox();
-            this.cboMaKhach = new System.Windows.Forms.TextBox();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.cboMaNhanVien = new System.Windows.Forms.ComboBox();
             this.txtNgayBan = new System.Windows.Forms.DateTimePicker();
@@ -66,18 +66,18 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDonGia = new System.Windows.Forms.TextBox();
+            this.txtDonGiaBan = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtTenHang = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cboMaHang = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnThemHoaDon = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnInHoaDon = new System.Windows.Forms.Button();
-            this.btnLuuHoaDon = new System.Windows.Forms.Button();
-            this.btnHuyHoaDon = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -96,12 +96,12 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.cboMaHD);
+            this.panel1.Controls.Add(this.cboMaHDBan);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 622);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 35);
+            this.panel1.Size = new System.Drawing.Size(1042, 35);
             this.panel1.TabIndex = 0;
             // 
             // btnTimKiem
@@ -112,15 +112,17 @@
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "&Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // cboMaHD
+            // cboMaHDBan
             // 
-            this.cboMaHD.FormattingEnabled = true;
-            this.cboMaHD.Location = new System.Drawing.Point(99, 7);
-            this.cboMaHD.Name = "cboMaHD";
-            this.cboMaHD.Size = new System.Drawing.Size(318, 24);
-            this.cboMaHD.TabIndex = 2;
-            this.cboMaHD.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cboMaHDBan.FormattingEnabled = true;
+            this.cboMaHDBan.Location = new System.Drawing.Point(99, 7);
+            this.cboMaHDBan.Name = "cboMaHDBan";
+            this.cboMaHDBan.Size = new System.Drawing.Size(318, 24);
+            this.cboMaHDBan.TabIndex = 2;
+            this.cboMaHDBan.DropDown += new System.EventHandler(this.cboMaHD_DropDown);
+            this.cboMaHDBan.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -146,16 +148,16 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(958, 622);
+            this.splitContainer1.Size = new System.Drawing.Size(1042, 622);
             this.splitContainer1.SplitterDistance = 257;
             this.splitContainer1.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboMaKhach);
             this.groupBox1.Controls.Add(this.txtDienThoai);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtTenKhach);
-            this.groupBox1.Controls.Add(this.cboMaKhach);
             this.groupBox1.Controls.Add(this.txtTenNhanVien);
             this.groupBox1.Controls.Add(this.cboMaNhanVien);
             this.groupBox1.Controls.Add(this.txtNgayBan);
@@ -174,6 +176,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
+            // 
+            // cboMaKhach
+            // 
+            this.cboMaKhach.FormattingEnabled = true;
+            this.cboMaKhach.Location = new System.Drawing.Point(558, 29);
+            this.cboMaKhach.Name = "cboMaKhach";
+            this.cboMaKhach.Size = new System.Drawing.Size(200, 24);
+            this.cboMaKhach.TabIndex = 16;
+            this.cboMaKhach.SelectedIndexChanged += new System.EventHandler(this.cboMaKhach_SelectedIndexChanged);
             // 
             // txtDienThoai
             // 
@@ -204,14 +215,6 @@
             this.txtTenKhach.Size = new System.Drawing.Size(200, 22);
             this.txtTenKhach.TabIndex = 13;
             // 
-            // cboMaKhach
-            // 
-            this.cboMaKhach.Location = new System.Drawing.Point(558, 26);
-            this.cboMaKhach.Name = "cboMaKhach";
-            this.cboMaKhach.Size = new System.Drawing.Size(200, 22);
-            this.cboMaKhach.TabIndex = 12;
-            this.cboMaKhach.TextChanged += new System.EventHandler(this.cboMaKhach_TextChanged);
-            // 
             // txtTenNhanVien
             // 
             this.txtTenNhanVien.BackColor = System.Drawing.Color.White;
@@ -229,6 +232,7 @@
             this.cboMaNhanVien.Name = "cboMaNhanVien";
             this.cboMaNhanVien.Size = new System.Drawing.Size(175, 24);
             this.cboMaNhanVien.TabIndex = 10;
+            this.cboMaNhanVien.SelectedIndexChanged += new System.EventHandler(this.cboMaNhanVien_SelectedIndexChanged);
             // 
             // txtNgayBan
             // 
@@ -343,7 +347,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(958, 361);
+            this.groupBox2.Size = new System.Drawing.Size(1042, 361);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin các mặt hàng";
@@ -356,8 +360,9 @@
             this.dgvHoaDonBanHang.Name = "dgvHoaDonBanHang";
             this.dgvHoaDonBanHang.RowHeadersWidth = 51;
             this.dgvHoaDonBanHang.RowTemplate.Height = 24;
-            this.dgvHoaDonBanHang.Size = new System.Drawing.Size(952, 189);
+            this.dgvHoaDonBanHang.Size = new System.Drawing.Size(1036, 189);
             this.dgvHoaDonBanHang.TabIndex = 4;
+            this.dgvHoaDonBanHang.DoubleClick += new System.EventHandler(this.dgvHoaDonBanHang_DoubleClick);
             // 
             // panel4
             // 
@@ -368,7 +373,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(3, 284);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(952, 46);
+            this.panel4.Size = new System.Drawing.Size(1036, 46);
             this.panel4.TabIndex = 3;
             // 
             // txtTongTien
@@ -415,7 +420,7 @@
             this.dgvHDBanHang.Name = "dgvHDBanHang";
             this.dgvHDBanHang.RowHeadersWidth = 51;
             this.dgvHDBanHang.RowTemplate.Height = 24;
-            this.dgvHDBanHang.Size = new System.Drawing.Size(952, 235);
+            this.dgvHDBanHang.Size = new System.Drawing.Size(1036, 235);
             this.dgvHDBanHang.TabIndex = 2;
             // 
             // panel3
@@ -426,7 +431,7 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.txtSoLuong);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtDonGia);
+            this.panel3.Controls.Add(this.txtDonGiaBan);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.txtTenHang);
             this.panel3.Controls.Add(this.label12);
@@ -435,7 +440,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 18);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(952, 77);
+            this.panel3.Size = new System.Drawing.Size(1036, 77);
             this.panel3.TabIndex = 1;
             // 
             // txtThanhTien
@@ -461,6 +466,7 @@
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.Size = new System.Drawing.Size(141, 22);
             this.txtGiamGia.TabIndex = 9;
+            this.txtGiamGia.TextChanged += new System.EventHandler(this.txtGiamGia_TextChanged);
             // 
             // label14
             // 
@@ -477,6 +483,8 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(134, 22);
             this.txtSoLuong.TabIndex = 7;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // label2
             // 
@@ -487,13 +495,13 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Số lượng:";
             // 
-            // txtDonGia
+            // txtDonGiaBan
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(612, 9);
-            this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(143, 22);
-            this.txtDonGia.TabIndex = 5;
+            this.txtDonGiaBan.Location = new System.Drawing.Point(612, 9);
+            this.txtDonGiaBan.Name = "txtDonGiaBan";
+            this.txtDonGiaBan.ReadOnly = true;
+            this.txtDonGiaBan.Size = new System.Drawing.Size(143, 22);
+            this.txtDonGiaBan.TabIndex = 5;
             // 
             // label13
             // 
@@ -529,6 +537,7 @@
             this.cboMaHang.Name = "cboMaHang";
             this.cboMaHang.Size = new System.Drawing.Size(134, 24);
             this.cboMaHang.TabIndex = 1;
+            this.cboMaHang.SelectedIndexChanged += new System.EventHandler(this.cboMaHang_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -542,62 +551,67 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnThemHoaDon);
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnDong);
             this.panel2.Controls.Add(this.btnInHoaDon);
-            this.panel2.Controls.Add(this.btnLuuHoaDon);
-            this.panel2.Controls.Add(this.btnHuyHoaDon);
+            this.panel2.Controls.Add(this.btnLuu);
+            this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 330);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(952, 28);
+            this.panel2.Size = new System.Drawing.Size(1036, 28);
             this.panel2.TabIndex = 0;
             // 
-            // btnThemHoaDon
+            // btnThem
             // 
-            this.btnThemHoaDon.Location = new System.Drawing.Point(12, -1);
-            this.btnThemHoaDon.Name = "btnThemHoaDon";
-            this.btnThemHoaDon.Size = new System.Drawing.Size(136, 33);
-            this.btnThemHoaDon.TabIndex = 12;
-            this.btnThemHoaDon.Text = "&Thêm hóa đơn";
-            this.btnThemHoaDon.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(30, -1);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(136, 33);
+            this.btnThem.TabIndex = 12;
+            this.btnThem.Text = "&Thêm hóa đơn";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(666, 0);
+            this.btnDong.Location = new System.Drawing.Point(882, -1);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(119, 33);
             this.btnDong.TabIndex = 11;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnInHoaDon
             // 
-            this.btnInHoaDon.Location = new System.Drawing.Point(506, -2);
+            this.btnInHoaDon.Location = new System.Drawing.Point(663, -1);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(135, 33);
             this.btnInHoaDon.TabIndex = 10;
             this.btnInHoaDon.Text = "&In hóa đơn";
             this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
-            // btnLuuHoaDon
+            // btnLuu
             // 
-            this.btnLuuHoaDon.Location = new System.Drawing.Point(163, -1);
-            this.btnLuuHoaDon.Name = "btnLuuHoaDon";
-            this.btnLuuHoaDon.Size = new System.Drawing.Size(147, 33);
-            this.btnLuuHoaDon.TabIndex = 9;
-            this.btnLuuHoaDon.Text = "& Lưu hóa đơn";
-            this.btnLuuHoaDon.UseVisualStyleBackColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(222, -1);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(147, 33);
+            this.btnLuu.TabIndex = 9;
+            this.btnLuu.Text = "& Lưu hóa đơn";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnHuyHoaDon
+            // btnXoa
             // 
-            this.btnHuyHoaDon.Location = new System.Drawing.Point(337, 0);
-            this.btnHuyHoaDon.Name = "btnHuyHoaDon";
-            this.btnHuyHoaDon.Size = new System.Drawing.Size(141, 33);
-            this.btnHuyHoaDon.TabIndex = 7;
-            this.btnHuyHoaDon.Text = "&Hủy hóa đơn";
-            this.btnHuyHoaDon.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(453, -1);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(141, 33);
+            this.btnXoa.TabIndex = 7;
+            this.btnXoa.Text = "&Hủy hóa đơn";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label17
             // 
@@ -612,7 +626,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 657);
+            this.ClientSize = new System.Drawing.Size(1042, 657);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Name = "frmHoaDonBan";
@@ -645,7 +659,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cboMaHD;
+        private System.Windows.Forms.ComboBox cboMaHDBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -664,7 +678,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenKhach;
-        private System.Windows.Forms.TextBox cboMaKhach;
         private System.Windows.Forms.TextBox txtTenNhanVien;
         private System.Windows.Forms.MaskedTextBox txtDienThoai;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -676,7 +689,7 @@
         private System.Windows.Forms.TextBox txtTenHang;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtDonGia;
+        private System.Windows.Forms.TextBox txtDonGiaBan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label14;
@@ -690,10 +703,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button btnThemHoaDon;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button btnInHoaDon;
-        private System.Windows.Forms.Button btnLuuHoaDon;
-        private System.Windows.Forms.Button btnHuyHoaDon;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.ComboBox cboMaKhach;
     }
 }
