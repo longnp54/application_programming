@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using IronPython.Compiler.Ast;
 using IronPython.Hosting;
 using application_programming.Class;
+using Microsoft.EntityFrameworkCore;
 
 namespace application_programming
 {
@@ -26,11 +27,14 @@ namespace application_programming
         {
             Class.Functions.Connect(); //Mở kết nối
         }
-
-        private void mnuChatLieu_Click(object sender, EventArgs e)
+        private void mnuThoat_Click(object sender, EventArgs e)
         {
             frmDMChatLieu frmChatLieu = new frmDMChatLieu(); //Khởi tạo đối tượng
             frmChatLieu.ShowDialog(); //Hiển thị
+        }
+        private void mnuChatLieu_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void mnuKhachHang_Click(object sender, EventArgs e)
@@ -57,15 +61,22 @@ namespace application_programming
             
         }
 
-        private void mnuThoat_Click(object sender, EventArgs e)
-        {
-            Class.Functions.Disconnect(); //Đóng kết nối
-            Application.Exit(); //Thoát
-        }
+        //private void mnuThoat_Click(object sender, EventArgs e)
+        //{
+        //    Class.Functions.Disconnect(); //Đóng kết nối
+        //    Application.Exit(); //Thoát
+        //}
 
         private void mnuFile_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mnuHoaDonBan_Click(object sender, EventArgs e)
+        {
+            frmHoaDonBan frmHoaDonBan = new frmHoaDonBan();
+            frmHoaDonBan.MdiParent = this;
+            frmHoaDonBan.Show();
         }
     }
 }
