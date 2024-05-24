@@ -537,5 +537,10 @@ namespace application_programming
             str = "Select TenNhanVien from tblNhanVien where MaNhanVien =N'" + cboMaNhanVien.SelectedValue + "'";
             txtTenNhanVien.Text = Functions.GetFieldValues(str);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
