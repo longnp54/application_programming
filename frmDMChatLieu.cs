@@ -197,7 +197,6 @@ namespace application_programming
         {
             this.Close();
         }
-
         private void txtMaChatLieu_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
