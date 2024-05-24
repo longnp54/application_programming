@@ -229,7 +229,7 @@
             this.Controls.Add(this.txtMaChatLieu);
             this.Controls.Add(this.label1);
             this.Name = "frmDMKhachHang";
-            this.Text = "frmDMKhachHang";
+            this.Text = "DANH MỤC KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.frmDMKhachHang_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();

@@ -211,7 +211,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmDMChatLieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Danh mục chất liệu";
+            this.Text = "DANH MỤC CHẤT LIỆU";
             this.Load += new System.EventHandler(this.frmDMChatLieu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

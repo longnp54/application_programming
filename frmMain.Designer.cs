@@ -98,7 +98,6 @@
             this.mnuDanhmuc.Name = "mnuDanhmuc";
             this.mnuDanhmuc.Size = new System.Drawing.Size(90, 24);
             this.mnuDanhmuc.Text = "&Danh mục";
-            this.mnuDanhmuc.Click += new System.EventHandler(this.mnuDanhmuc_Click);
             // 
             // mnuChatLieu
             // 
