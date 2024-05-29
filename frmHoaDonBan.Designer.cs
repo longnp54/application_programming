@@ -675,7 +675,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboMaNhanVien;
         private System.Windows.Forms.DateTimePicker txtNgayBan;
-        private System.Windows.Forms.TextBox txtMaHDBan;
+        public System.Windows.Forms.TextBox txtMaHDBan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDiaChi;

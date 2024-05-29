@@ -29,18 +29,34 @@ namespace application_programming
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
             ResetValue(); //Xoá trắng các textbox
-            lbMaChatLieu.Enabled = true; //cho phép nhập mới
-            lbMaChatLieu.Focus();
+            txtMaChatLieu.Enabled = true; //cho phép nhập mới
+            txtMaChatLieu.Focus();
         }
 
         private void ResetValue()
         {
-            lbMaChatLieu.Text = "";
+            //lbMaChatLieu.Text = "";
             txtTenChatLieu.Text = "";
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void frmDMChatLieu_Load(object sender, EventArgs e)
         {
-            lbMaChatLieu.Enabled = false;
+            txtMaChatLieu.Enabled = false;
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;
             LoadDataGridView(); //Hiển thị bảng tblChatLieu
@@ -53,19 +69,18 @@ namespace application_programming
             tblCL = Class.Functions.GetDataToTable(sql); //Đọc dữ liệu từ bảng
             dgvChatLieu.DataSource = tblCL; //Nguồn dữ liệu            
             dgvChatLieu.Columns[0].HeaderText = "Mã chất liệu";
-            dgvChatLieu.Columns[1].HeaderText = "Mã chất liệu";
+            dgvChatLieu.Columns[1].HeaderText = "Tên chất liệu";
             dgvChatLieu.Columns[0].Width = 100;
             dgvChatLieu.Columns[1].Width = 300;
             dgvChatLieu.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
             dgvChatLieu.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp
         }
-
         private void dgvChatLieu_Click(object sender, EventArgs e)
         {
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lbMaChatLieu.Focus();
+                txtMaChatLieu.Focus();
                 return;
             }
             if (tblCL.Rows.Count == 0) //Nếu không có dữ liệu
@@ -73,7 +88,7 @@ namespace application_programming
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            lbMaChatLieu.Text = dgvChatLieu.CurrentRow.Cells["MaChatLieu"].Value.ToString();
+            txtMaChatLieu.Text = dgvChatLieu.CurrentRow.Cells["MaChatLieu"].Value.ToString();
             txtTenChatLieu.Text = dgvChatLieu.CurrentRow.Cells["TenChatLieu"].Value.ToString();
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
@@ -83,10 +98,10 @@ namespace application_programming
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql; //Lưu lệnh sql
-            if (lbMaChatLieu.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
+            if (txtMaChatLieu.Text.Trim().Length == 0) //Nếu chưa nhập mã chất liệu
             {
                 MessageBox.Show("Bạn phải nhập mã chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lbMaChatLieu.Focus();
+                txtMaChatLieu.Focus();
                 return;
             }
             if (txtTenChatLieu.Text.Trim().Length == 0) //Nếu chưa nhập tên chất liệu
@@ -95,16 +110,16 @@ namespace application_programming
                 txtTenChatLieu.Focus();
                 return;
             }
-            sql = "Select MaChatLieu From tblChatLieu where MaChatLieu=N'" + lbMaChatLieu.Text.Trim() + "'";
+            sql = "Select MaChatLieu From tblChatLieu where MaChatLieu=N'" + txtMaChatLieu.Text.Trim() + "'";
             if (Class.Functions.CheckKey(sql))
             {
                 MessageBox.Show("Mã chất liệu này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                lbMaChatLieu.Focus();
+                txtMaChatLieu.Focus();
                 return;
             }
 
             sql = "INSERT INTO tblChatLieu VALUES(N'" +
-                lbMaChatLieu.Text + "',N'" + txtTenChatLieu.Text + "')";
+                txtMaChatLieu.Text + "',N'" + txtTenChatLieu.Text + "')";
             Class.Functions.RunSQL(sql); //Thực hiện câu lệnh sql
             LoadDataGridView(); //Nạp lại DataGridView
             ResetValue();
@@ -113,7 +128,7 @@ namespace application_programming
             btnSua.Enabled = true;
             btnBoQua.Enabled = false;
             btnLuu.Enabled = false;
-            lbMaChatLieu.Enabled = false;
+            txtMaChatLieu.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -124,7 +139,7 @@ namespace application_programming
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (lbMaChatLieu.Text == "") //nếu chưa chọn bản ghi nào
+            if (txtMaChatLieu.Text == "") //nếu chưa chọn bản ghi nào
             {
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -136,7 +151,7 @@ namespace application_programming
             }
             sql = "UPDATE tblChatLieu SET TenChatLieu=N'" +
                 txtTenChatLieu.Text.ToString() +
-                "' WHERE MaChatLieu=N'" + lbMaChatLieu.Text + "'";
+                "' WHERE MaChatLieu=N'" + txtMaChatLieu.Text + "'";
             Class.Functions.RunSQL(sql);
             LoadDataGridView();
             ResetValue();
@@ -152,14 +167,14 @@ namespace application_programming
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (lbMaChatLieu.Text == "") //nếu chưa chọn bản ghi nào
+            if (txtMaChatLieu.Text == "") //nếu chưa chọn bản ghi nào
             {
                 MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                sql = "DELETE tblChatLieu WHERE MaChatLieu=N'" + lbMaChatLieu.Text + "'";
+                sql = "DELETE tblChatLieu WHERE MaChatLieu=N'" + txtMaChatLieu.Text + "'";
                 Class.Functions.RunSqlDel(sql);
                 LoadDataGridView();
                 ResetValue();
@@ -174,7 +189,7 @@ namespace application_programming
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
-            lbMaChatLieu.Enabled = false;
+            txtMaChatLieu.Enabled = false;
         }
 
         private void btnDong_Click(object sender, EventArgs e)

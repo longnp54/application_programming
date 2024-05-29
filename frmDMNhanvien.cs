@@ -149,7 +149,7 @@ namespace application_programming
                 txtMaNhanVien.Text = "";
                 return;
             }
-            sql = "INSERT INTO tblNhanVien(MaNhanVien,TenNhanVien,GioiTinh, DiaChi,DienThoai, NgaySinh) VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + mtbDienThoai.Text + "','" + Functions.ConvertDateTime(mskNgaySinh.Text) + "')";
+            sql = "INSERT INTO tblNhanVien(MaNhanVien,TenNhanVien, GioiTinh, DiaChi,DienThoai, NgaySinh) VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + mtbDienThoai.Text + "','" + Functions.ConvertDateTime(mskNgaySinh.Text) + "')";
             Functions.RunSQL(sql);
             LoadDataGridView();
             ResetValues();
@@ -220,6 +220,7 @@ namespace application_programming
             btnBoQua.Enabled = false;
         }
 
+      
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string sql;

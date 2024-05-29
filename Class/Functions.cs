@@ -17,7 +17,7 @@ namespace application_programming.Class
         public static void Connect()
         {
             Con = new SqlConnection();   //Khởi tạo đối tượng
-            Con.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + Application.StartupPath + @"\Quanlybanhang.mdf;Integrated Security=True; TrustServerCertificate = True; Connect Timeout=30";
+            Con.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\application_programming\Quanlybanhang.mdf;Integrated Security=True; TrustServerCertificate = True; Connect Timeout=30";
             Con.Open();                  //Mở kết nối
             //Kiểm tra kết nối
             if (Con.State == ConnectionState.Open)

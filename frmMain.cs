@@ -71,5 +71,11 @@ namespace application_programming
             frmHoaDonBan frmHoaDonBan = new frmHoaDonBan();
             frmHoaDonBan.Show();
         }
+
+        private void mnuFindHoaDon_Click(object sender, EventArgs e)
+        {
+            frmTimHDBan frmTimHDBan = new frmTimHDBan();
+            frmTimHDBan.Show();
+        }
     }
 }

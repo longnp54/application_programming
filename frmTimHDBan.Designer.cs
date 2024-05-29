@@ -48,11 +48,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvDanhSachHD = new System.Windows.Forms.DataGridView();
+            this.dgvTKHoaDon = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,6 +82,7 @@
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "&Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnDong
             // 
@@ -91,6 +92,7 @@
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "&Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnTimLai
             // 
@@ -100,6 +102,7 @@
             this.btnTimLai.TabIndex = 4;
             this.btnTimLai.Text = "&Tìm lại";
             this.btnTimLai.UseVisualStyleBackColor = true;
+            this.btnTimLai.Click += new System.EventHandler(this.btnTimLai_Click);
             // 
             // panel2
             // 
@@ -236,23 +239,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã hóa đơn:";
             // 
-            // dgvDanhSachHD
+            // dgvTKHoaDon
             // 
-            this.dgvDanhSachHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachHD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDanhSachHD.Location = new System.Drawing.Point(0, 124);
-            this.dgvDanhSachHD.Name = "dgvDanhSachHD";
-            this.dgvDanhSachHD.RowHeadersWidth = 51;
-            this.dgvDanhSachHD.RowTemplate.Height = 24;
-            this.dgvDanhSachHD.Size = new System.Drawing.Size(800, 200);
-            this.dgvDanhSachHD.TabIndex = 4;
+            this.dgvTKHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTKHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTKHoaDon.Location = new System.Drawing.Point(0, 124);
+            this.dgvTKHoaDon.Name = "dgvTKHoaDon";
+            this.dgvTKHoaDon.RowHeadersWidth = 51;
+            this.dgvTKHoaDon.RowTemplate.Height = 24;
+            this.dgvTKHoaDon.Size = new System.Drawing.Size(800, 200);
+            this.dgvTKHoaDon.TabIndex = 4;
+            this.dgvTKHoaDon.DoubleClick += new System.EventHandler(this.dgvTKHoaDon_DoubleClick);
             // 
             // frmTimHDBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvDanhSachHD);
+            this.Controls.Add(this.dgvTKHoaDon);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -263,7 +267,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +281,7 @@
         private System.Windows.Forms.Button btnTimLai;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvDanhSachHD;
+        private System.Windows.Forms.DataGridView dgvTKHoaDon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaKhach;
         private System.Windows.Forms.TextBox txtMaNhanVien;
