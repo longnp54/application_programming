@@ -38,22 +38,6 @@ namespace application_programming
             lbMaChatLieu.Text = "";
             txtTenChatLieu.Text = "";
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frmDMChatLieu_Load(object sender, EventArgs e)
         {
             lbMaChatLieu.Enabled = false;

@@ -62,7 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 75);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // flowLayoutPanel1
             // 
@@ -156,7 +155,7 @@
             // lbMaChatLieu
             // 
             this.lbMaChatLieu.AutoSize = true;
-            this.lbMaChatLieu.Location = new System.Drawing.Point(38, 41);
+            this.lbMaChatLieu.Location = new System.Drawing.Point(46, 41);
             this.lbMaChatLieu.Name = "lbMaChatLieu";
             this.lbMaChatLieu.Size = new System.Drawing.Size(81, 16);
             this.lbMaChatLieu.TabIndex = 5;
@@ -164,7 +163,7 @@
             // 
             // txtMaChatLieu
             // 
-            this.txtMaChatLieu.Location = new System.Drawing.Point(158, 70);
+            this.txtMaChatLieu.Location = new System.Drawing.Point(158, 41);
             this.txtMaChatLieu.Name = "txtMaChatLieu";
             this.txtMaChatLieu.Size = new System.Drawing.Size(217, 22);
             this.txtMaChatLieu.TabIndex = 4;
@@ -172,7 +171,7 @@
             // 
             // txtTenChatLieu
             // 
-            this.txtTenChatLieu.Location = new System.Drawing.Point(158, 41);
+            this.txtTenChatLieu.Location = new System.Drawing.Point(158, 70);
             this.txtTenChatLieu.Name = "txtTenChatLieu";
             this.txtTenChatLieu.Size = new System.Drawing.Size(217, 22);
             this.txtTenChatLieu.TabIndex = 3;
@@ -187,7 +186,6 @@
             this.label1.Size = new System.Drawing.Size(287, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH MỤC CHẤT LIỆU";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // dgvChatLieu
             // 
