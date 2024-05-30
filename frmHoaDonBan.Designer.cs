@@ -99,7 +99,7 @@
             this.panel1.Controls.Add(this.cboMaHDBan);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 655);
+            this.panel1.Location = new System.Drawing.Point(0, 604);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1042, 58);
             this.panel1.TabIndex = 0;
@@ -122,7 +122,6 @@
             this.cboMaHDBan.Size = new System.Drawing.Size(318, 24);
             this.cboMaHDBan.TabIndex = 2;
             this.cboMaHDBan.DropDown += new System.EventHandler(this.cboMaHD_DropDown);
-            this.cboMaHDBan.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -132,7 +131,6 @@
             this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hóa đơn:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // splitContainer1
             // 
@@ -145,13 +143,12 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.lblBangChu);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(1042, 655);
-            this.splitContainer1.SplitterDistance = 270;
+            this.splitContainer1.Size = new System.Drawing.Size(1042, 604);
+            this.splitContainer1.SplitterDistance = 248;
             this.splitContainer1.TabIndex = 1;
             // 
             // groupBox1
@@ -206,7 +203,6 @@
             this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(200, 22);
             this.txtDiaChi.TabIndex = 14;
-            this.txtDiaChi.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtTenKhach
             // 
@@ -252,7 +248,6 @@
             this.txtMaHDBan.ReadOnly = true;
             this.txtMaHDBan.Size = new System.Drawing.Size(175, 22);
             this.txtMaHDBan.TabIndex = 8;
-            this.txtMaHDBan.TextChanged += new System.EventHandler(this.txtMaHDBan_TextChanged);
             // 
             // label10
             // 
@@ -325,7 +320,6 @@
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mã hóa đơn:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblBangChu
             // 
@@ -349,7 +343,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1042, 381);
+            this.groupBox2.Size = new System.Drawing.Size(1042, 352);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin các mặt hàng";
@@ -362,7 +356,7 @@
             this.dgvHoaDonBanHang.Name = "dgvHoaDonBanHang";
             this.dgvHoaDonBanHang.RowHeadersWidth = 51;
             this.dgvHoaDonBanHang.RowTemplate.Height = 24;
-            this.dgvHoaDonBanHang.Size = new System.Drawing.Size(1036, 149);
+            this.dgvHoaDonBanHang.Size = new System.Drawing.Size(1036, 120);
             this.dgvHoaDonBanHang.TabIndex = 4;
             this.dgvHoaDonBanHang.DoubleClick += new System.EventHandler(this.dgvHoaDonBanHang_DoubleClick);
             // 
@@ -373,7 +367,7 @@
             this.panel4.Controls.Add(this.lblTongTien);
             this.panel4.Controls.Add(this.label16);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 244);
+            this.panel4.Location = new System.Drawing.Point(3, 215);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1036, 66);
             this.panel4.TabIndex = 3;
@@ -422,7 +416,7 @@
             this.dgvHDBanHang.Name = "dgvHDBanHang";
             this.dgvHDBanHang.RowHeadersWidth = 51;
             this.dgvHDBanHang.RowTemplate.Height = 24;
-            this.dgvHDBanHang.Size = new System.Drawing.Size(1036, 215);
+            this.dgvHDBanHang.Size = new System.Drawing.Size(1036, 186);
             this.dgvHDBanHang.TabIndex = 2;
             // 
             // panel3
@@ -513,7 +507,6 @@
             this.label13.Size = new System.Drawing.Size(56, 16);
             this.label13.TabIndex = 4;
             this.label13.Text = "Đơn giá:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txtTenHang
             // 
@@ -549,7 +542,6 @@
             this.label11.Size = new System.Drawing.Size(62, 16);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã hàng:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel2
             // 
@@ -560,7 +552,7 @@
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 310);
+            this.panel2.Location = new System.Drawing.Point(3, 281);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1036, 68);
             this.panel2.TabIndex = 0;
@@ -628,7 +620,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 713);
+            this.ClientSize = new System.Drawing.Size(1042, 662);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Name = "frmHoaDonBan";

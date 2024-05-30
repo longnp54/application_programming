@@ -21,11 +21,7 @@ namespace application_programming
             InitializeComponent();
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -77,31 +73,6 @@ namespace application_programming
             str = "SELECT TongTien FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             txtTongTien.Text = Functions.GetFieldValues(str);
             lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(txtTongTien.Text);
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaHDBan_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         //Nạp dữ liệu lên lưới 
@@ -536,16 +507,6 @@ namespace application_programming
             // Khi chọn Mã nhân viên thì tên nhân viên tự động hiện ra
             str = "Select TenNhanVien from tblNhanVien where MaNhanVien =N'" + cboMaNhanVien.SelectedValue + "'";
             txtTenNhanVien.Text = Functions.GetFieldValues(str);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

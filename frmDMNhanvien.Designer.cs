@@ -150,7 +150,7 @@
             // mtbDienThoai
             // 
             this.mtbDienThoai.Location = new System.Drawing.Point(524, 104);
-            this.mtbDienThoai.Mask = "(999) 000-0000";
+            this.mtbDienThoai.Mask = "(9999) 000 000";
             this.mtbDienThoai.Name = "mtbDienThoai";
             this.mtbDienThoai.Size = new System.Drawing.Size(206, 22);
             this.mtbDienThoai.TabIndex = 22;
@@ -245,11 +245,13 @@
             // 
             // mskNgaySinh
             // 
-            this.mskNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.mskNgaySinh.CustomFormat = "MM/dd/yyyy";
+            this.mskNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.mskNgaySinh.Location = new System.Drawing.Point(524, 144);
             this.mskNgaySinh.Name = "mskNgaySinh";
             this.mskNgaySinh.Size = new System.Drawing.Size(200, 22);
             this.mskNgaySinh.TabIndex = 28;
+            this.mskNgaySinh.Value = new System.DateTime(2024, 5, 16, 0, 0, 0, 0);
             // 
             // frmDMNhanVien
             // 
