@@ -245,8 +245,8 @@
             // 
             // mskNgaySinh
             // 
-            this.mskNgaySinh.CustomFormat = "MM/dd/yyyy";
-            this.mskNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.mskNgaySinh.CustomFormat = "";
+            this.mskNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.mskNgaySinh.Location = new System.Drawing.Point(524, 144);
             this.mskNgaySinh.Name = "mskNgaySinh";
             this.mskNgaySinh.Size = new System.Drawing.Size(200, 22);

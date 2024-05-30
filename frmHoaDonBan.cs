@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using application_programming.Class;
 using COMExcel = Microsoft.Office.Interop.Excel;
+using System.Globalization;
 
 namespace application_programming
 {
@@ -21,13 +22,6 @@ namespace application_programming
         {
             InitializeComponent();
         }
-
- 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmHoaDonBan_Load(object sender, EventArgs e)
         {
             btnThem.Enabled = true;
@@ -68,7 +62,8 @@ namespace application_programming
             str = "SELECT NgayBan FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             dtpNgayBan.Value = DateTime.Parse(Functions.GetFieldValues(str));
             str = "SELECT MaNhanVien FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
-            cboMaNhanVien.SelectedValue = Functions.GetFieldValues(str);
+            // Select by Value instead of Text
+            cboMaNhanVien.SelectedText = Functions.GetFieldValues(str);
             str = "SELECT MaKhach FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             cboMaKhach.SelectedValue = Functions.GetFieldValues(str);
             str = "SELECT TongTien FROM tblHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
@@ -76,27 +71,28 @@ namespace application_programming
             lblBangChu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChuoi(Double.Parse(txtTongTien.Text));
         }
 
+
         //Nạp dữ liệu lên lưới 
         private void LoadDataGridView()
         {
             string sql;
             sql = "SELECT a.MaHang, b.TenHang, a.SoLuong, b.DonGiaBan, a.GiamGia,a.ThanhTien FROM tblChiTietHDBan AS a, tblHang AS b WHERE a.MaHDBan = N'" + txtMaHDBan.Text + "' AND a.MaHang=b.MaHang";
             tblCTHDB = Functions.GetDataToTable(sql);
-            dgvHDBanHang.DataSource = tblCTHDB;
-            dgvHDBanHang.Columns[0].HeaderText = "Mã hàng";
-            dgvHDBanHang.Columns[1].HeaderText = "Tên hàng";
-            dgvHDBanHang.Columns[2].HeaderText = "Số lượng";
-            dgvHDBanHang.Columns[3].HeaderText = "Đơn giá";
-            dgvHDBanHang.Columns[4].HeaderText = "Giảm giá %";
-            dgvHDBanHang.Columns[5].HeaderText = "Thành tiền";
-            dgvHDBanHang.Columns[0].Width = 80;
-            dgvHDBanHang.Columns[1].Width = 130;
-            dgvHDBanHang.Columns[2].Width = 80;
-            dgvHDBanHang.Columns[3].Width = 90;
-            dgvHDBanHang.Columns[4].Width = 90;
-            dgvHDBanHang.Columns[5].Width = 90;
-            dgvHDBanHang.AllowUserToAddRows = false;
-            dgvHDBanHang.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvHoaDonBanHang.DataSource = tblCTHDB;
+            dgvHoaDonBanHang.Columns[0].HeaderText = "Mã hàng";
+            dgvHoaDonBanHang.Columns[1].HeaderText = "Tên hàng";
+            dgvHoaDonBanHang.Columns[2].HeaderText = "Số lượng";
+            dgvHoaDonBanHang.Columns[3].HeaderText = "Đơn giá";
+            dgvHoaDonBanHang.Columns[4].HeaderText = "Giảm giá %";
+            dgvHoaDonBanHang.Columns[5].HeaderText = "Thành tiền";
+            dgvHoaDonBanHang.Columns[0].Width = 80;
+            dgvHoaDonBanHang.Columns[1].Width = 130;
+            dgvHoaDonBanHang.Columns[2].Width = 80;
+            dgvHoaDonBanHang.Columns[3].Width = 90;
+            dgvHoaDonBanHang.Columns[4].Width = 90;
+            dgvHoaDonBanHang.Columns[5].Width = 90;
+            dgvHoaDonBanHang.AllowUserToAddRows = false;
+            dgvHoaDonBanHang.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -158,38 +154,48 @@ namespace application_programming
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-                string sql;
-                double sl, SLcon, tong, Tongmoi;
-                sql = "SELECT MaHDBan FROM tblHDBan WHERE MaHDBan=N'" + txtMaHDBan.Text + "'";
-                if (!Functions.CheckKey(sql))
+            string sql;
+            double sl, SLcon, tong, Tongmoi;
+            sql = "SELECT MaHDBan FROM tblHDBan WHERE MaHDBan=N'" + txtMaHDBan.Text + "'";
+            if (!Functions.CheckKey(sql))
+            {
+                // Mã hóa đơn chưa có, tiến hành lưu các thông tin chung
+                // Mã HDBan được sinh tự động do đó không có trường hợp trùng khóa
+                if (string.IsNullOrEmpty(dtpNgayBan.Text))
                 {
-                    // Mã hóa đơn chưa có, tiến hành lưu các thông tin chung
-                    // Mã HDBan được sinh tự động do đó không có trường hợp trùng khóa
-                    /*if (dtpNgayBan.Text.Length == 0)
-                    {
-                        MessageBox.Show("Bạn phải nhập ngày bán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dtpNgayBan.Focus();
-                        return;
-                    }*/
-                    if (cboMaNhanVien.Text.Length == 0)
-                    {
-                        MessageBox.Show("Bạn phải nhập nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        cboMaNhanVien.Focus();
-                        return;
-                    }
-                    if (cboMaKhach.Text.Length == 0)
-                    {
-                        MessageBox.Show("Bạn phải nhập khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        cboMaKhach.Focus();
-                        return;
-                    }
-                    sql = "INSERT INTO tblHDBan(MaHDBan, NgayBan, MaNhanVien, MaKhach, TongTien) VALUES (N'" + txtMaHDBan.Text.Trim() + "','" +
-                            dtpNgayBan.Value + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
-                            cboMaKhach.SelectedValue + "'," + txtTongTien.Text + ")";
-                    Functions.RunSQL(sql);
+                    MessageBox.Show("Bạn phải nhập ngày bán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dtpNgayBan.Focus();
+                    return;
                 }
-                // Lưu thông tin của các mặt hàng
-                if (cboMaHang.Text.Trim().Length == 0)
+
+                // Parsing DateTime
+                DateTime ngayBan;
+                if (!DateTime.TryParseExact(dtpNgayBan.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayBan))
+                {
+                    MessageBox.Show("Ngày bán không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dtpNgayBan.Focus();
+                    return;
+                }
+
+                if (cboMaNhanVien.Text.Length == 0)
+                {
+                    MessageBox.Show("Bạn phải nhập nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboMaNhanVien.Focus();
+                    return;
+                }
+                if (cboMaKhach.Text.Length == 0)
+                {
+                    MessageBox.Show("Bạn phải nhập khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboMaKhach.Focus();
+                    return;
+                }
+                sql = "INSERT INTO tblHDBan(MaHDBan, NgayBan, MaNhanVien, MaKhach, TongTien) VALUES (N'" + txtMaHDBan.Text.Trim() + "','" +
+                        ngayBan.ToString("yyyy-MM-dd") + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
+                        cboMaKhach.SelectedValue + "'," + txtTongTien.Text + ")";
+                Functions.RunSQL(sql);
+            }
+            // Lưu thông tin của các mặt hàng
+            if (cboMaHang.Text.Trim().Length == 0)
                 {
                     MessageBox.Show("Bạn phải nhập mã hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cboMaHang.Focus();

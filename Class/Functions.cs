@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using static IronPython.Runtime.Profiler;
 using System.Runtime.Remoting.Contexts;
+
 namespace application_programming.Class
 {
     internal class Functions
@@ -95,16 +96,55 @@ namespace application_programming.Class
         public static bool IsDate(string date)
         {
             string[] elements = date.Split('/');
-            if ((Convert.ToInt32(elements[0]) >= 1) && (Convert.ToInt32(elements[0]) <= 31) && (Convert.ToInt32(elements[1]) >= 1) && (Convert.ToInt32(elements[1]) <= 12) && (Convert.ToInt32(elements[2]) >= 1900))
-                return true;
-            else return false;
+
+            if (elements.Length != 3)
+                return false;
+
+            int day, month, year;
+
+            // Try to parse the elements
+            bool isDayValid = Int32.TryParse(elements[0], out day);
+            bool isMonthValid = Int32.TryParse(elements[1], out month);
+            bool isYearValid = Int32.TryParse(elements[2], out year);
+
+            if (isDayValid && isMonthValid && isYearValid)
+            {
+                // Check if day, month, and year are in valid range
+                if ((day >= 1 && day <= 31) && (month >= 1 && month <= 12) && (year >= 1900))
+                {
+                    // Further check for valid day in month
+                    try
+                    {
+                        DateTime dt = new DateTime(year, month, day);
+                        return true;
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return false;
         }
 
         public static string ConvertDateTime(string date)
         {
+            if (!IsDate(date))
+            {
+                throw new ArgumentException("Invalid date format. Please use dd/MM/yyyy.");
+            }
+
             string[] elements = date.Split('/');
-            string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
-            return dt;
+            int day = Int32.Parse(elements[0]);
+            int month = Int32.Parse(elements[1]);
+            int year = Int32.Parse(elements[2]);
+
+            DateTime dt = new DateTime(year, month, day);
+
+            // Convert to SQL date format yyyy-MM-dd
+            string sqlDate = dt.ToString("yyyy-MM-dd");
+            return sqlDate;
         }
         public static string GetFieldValues(string sql)
         {
@@ -248,7 +288,7 @@ namespace application_programming.Class
 
 
         //Hàm chuyển số sang chữ
-        /*public static string ChuyenSoSangChu1(string sNumber)
+        public static string ChuyenSoSangChu1(string sNumber)
             {
                 int mLen, mDigit;
                 string mTemp = "";
@@ -314,7 +354,7 @@ namespace application_programming.Class
                 //Viết hoa ký tự đầu tiên
                 mTemp = mTemp.Substring(0, 1).ToUpper() + mTemp.Substring(1) + " đồng";
                 return mTemp;
-            }*/
+            }
 
         //Chuyển đổi từ PM sang dạng 24h
         public static string ConvertTimeTo24(string hour)

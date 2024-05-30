@@ -68,8 +68,9 @@ namespace application_programming
 
         private void mnuHoaDonBan_Click(object sender, EventArgs e)
         {
-            frmHoaDonBan frmHoaDonBan = new frmHoaDonBan();
-            frmHoaDonBan.Show();
+            frmHoaDonBan frm = new frmHoaDonBan();
+     
+            frm.Show();
         }
 
         private void mnuFindHoaDon_Click(object sender, EventArgs e)

@@ -232,11 +232,13 @@
             // 
             // dtpNgayBan
             // 
+            this.dtpNgayBan.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayBan.Location = new System.Drawing.Point(138, 58);
             this.dtpNgayBan.Name = "dtpNgayBan";
             this.dtpNgayBan.Size = new System.Drawing.Size(175, 22);
             this.dtpNgayBan.TabIndex = 9;
+            this.dtpNgayBan.Value = new System.DateTime(2024, 5, 31, 0, 0, 0, 0);
             // 
             // txtMaHDBan
             // 
@@ -338,11 +340,11 @@
             // 
             this.dgvHoaDonBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDonBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHoaDonBanHang.Location = new System.Drawing.Point(3, 95);
+            this.dgvHoaDonBanHang.Location = new System.Drawing.Point(3, 104);
             this.dgvHoaDonBanHang.Name = "dgvHoaDonBanHang";
             this.dgvHoaDonBanHang.RowHeadersWidth = 51;
             this.dgvHoaDonBanHang.RowTemplate.Height = 24;
-            this.dgvHoaDonBanHang.Size = new System.Drawing.Size(1036, 120);
+            this.dgvHoaDonBanHang.Size = new System.Drawing.Size(1036, 111);
             this.dgvHoaDonBanHang.TabIndex = 4;
             this.dgvHoaDonBanHang.DoubleClick += new System.EventHandler(this.dgvHoaDonBanHang_DoubleClick);
             // 
@@ -398,11 +400,11 @@
             // 
             this.dgvHDBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHDBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHDBanHang.Location = new System.Drawing.Point(3, 95);
+            this.dgvHDBanHang.Location = new System.Drawing.Point(3, 104);
             this.dgvHDBanHang.Name = "dgvHDBanHang";
             this.dgvHDBanHang.RowHeadersWidth = 51;
             this.dgvHDBanHang.RowTemplate.Height = 24;
-            this.dgvHDBanHang.Size = new System.Drawing.Size(1036, 186);
+            this.dgvHDBanHang.Size = new System.Drawing.Size(1036, 177);
             this.dgvHDBanHang.TabIndex = 2;
             // 
             // panel3
@@ -422,7 +424,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 18);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1036, 77);
+            this.panel3.Size = new System.Drawing.Size(1036, 86);
             this.panel3.TabIndex = 1;
             // 
             // txtThanhTien
@@ -651,7 +653,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboMaNhanVien;
-        private System.Windows.Forms.DateTimePicker dtpNgayBan;
         public System.Windows.Forms.TextBox txtMaHDBan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -688,5 +689,6 @@
         private System.Windows.Forms.Button btnLuuHoaDon;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.ComboBox cboMaKhach;
+        private System.Windows.Forms.DateTimePicker dtpNgayBan;
     }
 }
