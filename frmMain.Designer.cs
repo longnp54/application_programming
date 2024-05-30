@@ -155,20 +155,20 @@
             // mnuFindHoaDon
             // 
             this.mnuFindHoaDon.Name = "mnuFindHoaDon";
-            this.mnuFindHoaDon.Size = new System.Drawing.Size(224, 26);
+            this.mnuFindHoaDon.Size = new System.Drawing.Size(169, 26);
             this.mnuFindHoaDon.Text = "Hoá đơn";
             this.mnuFindHoaDon.Click += new System.EventHandler(this.mnuFindHoaDon_Click);
             // 
             // mnuFindHang
             // 
             this.mnuFindHang.Name = "mnuFindHang";
-            this.mnuFindHang.Size = new System.Drawing.Size(224, 26);
+            this.mnuFindHang.Size = new System.Drawing.Size(169, 26);
             this.mnuFindHang.Text = "Hàng";
             // 
             // mnuFindKhachHang
             // 
             this.mnuFindKhachHang.Name = "mnuFindKhachHang";
-            this.mnuFindKhachHang.Size = new System.Drawing.Size(224, 26);
+            this.mnuFindKhachHang.Size = new System.Drawing.Size(169, 26);
             this.mnuFindKhachHang.Text = "Khách hàng";
             // 
             // mnuBaoCao
@@ -222,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 439);
+            this.ClientSize = new System.Drawing.Size(879, 520);
             this.Controls.Add(this.toolBar);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

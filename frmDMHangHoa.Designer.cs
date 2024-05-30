@@ -276,7 +276,7 @@
             // LabelAnh
             // 
             this.LabelAnh.AutoSize = true;
-            this.LabelAnh.Location = new System.Drawing.Point(437, 55);
+            this.LabelAnh.Location = new System.Drawing.Point(448, 52);
             this.LabelAnh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelAnh.Name = "LabelAnh";
             this.LabelAnh.Size = new System.Drawing.Size(30, 16);
@@ -382,7 +382,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(312, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";

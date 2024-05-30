@@ -189,7 +189,7 @@
             // 
             this.txtDienThoai.BackColor = System.Drawing.Color.White;
             this.txtDienThoai.Location = new System.Drawing.Point(558, 113);
-            this.txtDienThoai.Mask = "(999) 000-0000";
+            this.txtDienThoai.Mask = "(9999) 000-000";
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.ReadOnly = true;
             this.txtDienThoai.Size = new System.Drawing.Size(200, 22);
@@ -234,11 +234,13 @@
             // 
             // txtNgayBan
             // 
-            this.txtNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtNgayBan.CustomFormat = "MM/dd/yyyy";
+            this.txtNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtNgayBan.Location = new System.Drawing.Point(138, 58);
             this.txtNgayBan.Name = "txtNgayBan";
             this.txtNgayBan.Size = new System.Drawing.Size(175, 22);
             this.txtNgayBan.TabIndex = 9;
+            this.txtNgayBan.ValueChanged += new System.EventHandler(this.txtNgayBan_ValueChanged);
             // 
             // txtMaHDBan
             // 

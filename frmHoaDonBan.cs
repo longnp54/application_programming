@@ -508,5 +508,10 @@ namespace application_programming
             str = "Select TenNhanVien from tblNhanVien where MaNhanVien =N'" + cboMaNhanVien.SelectedValue + "'";
             txtTenNhanVien.Text = Functions.GetFieldValues(str);
         }
+
+        private void txtNgayBan_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
