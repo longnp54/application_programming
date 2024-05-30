@@ -187,7 +187,7 @@
             // 
             this.mtbDienThoai.BackColor = System.Drawing.Color.White;
             this.mtbDienThoai.Location = new System.Drawing.Point(558, 113);
-            this.mtbDienThoai.Mask = "(999) 000-0000";
+            this.mtbDienThoai.Mask = "(9999) 000-000";
             this.mtbDienThoai.Name = "mtbDienThoai";
             this.mtbDienThoai.ReadOnly = true;
             this.mtbDienThoai.Size = new System.Drawing.Size(200, 22);
