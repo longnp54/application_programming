@@ -42,11 +42,6 @@
             this.mnuHoaDonBan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFindHoaDon = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuFindHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuFindKhachHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuBaoCao = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuBCHangTon = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuBCDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTroGiup = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolBar = new System.Windows.Forms.ToolStrip();
@@ -63,7 +58,6 @@
             this.mnuDanhmuc,
             this.mnuHoaDon,
             this.mnuTimKiem,
-            this.mnuBaoCao,
             this.mnuTroGiup});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -145,9 +139,7 @@
             // mnuTimKiem
             // 
             this.mnuTimKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuFindHoaDon,
-            this.mnuFindHang,
-            this.mnuFindKhachHang});
+            this.mnuFindHoaDon});
             this.mnuTimKiem.Name = "mnuTimKiem";
             this.mnuTimKiem.Size = new System.Drawing.Size(84, 24);
             this.mnuTimKiem.Text = "&Tìm kiếm";
@@ -158,39 +150,6 @@
             this.mnuFindHoaDon.Size = new System.Drawing.Size(169, 26);
             this.mnuFindHoaDon.Text = "Hoá đơn";
             this.mnuFindHoaDon.Click += new System.EventHandler(this.mnuFindHoaDon_Click);
-            // 
-            // mnuFindHang
-            // 
-            this.mnuFindHang.Name = "mnuFindHang";
-            this.mnuFindHang.Size = new System.Drawing.Size(169, 26);
-            this.mnuFindHang.Text = "Hàng";
-            // 
-            // mnuFindKhachHang
-            // 
-            this.mnuFindKhachHang.Name = "mnuFindKhachHang";
-            this.mnuFindKhachHang.Size = new System.Drawing.Size(169, 26);
-            this.mnuFindKhachHang.Text = "Khách hàng";
-            // 
-            // mnuBaoCao
-            // 
-            this.mnuBaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuBCHangTon,
-            this.mnuBCDoanhThu});
-            this.mnuBaoCao.Name = "mnuBaoCao";
-            this.mnuBaoCao.Size = new System.Drawing.Size(77, 24);
-            this.mnuBaoCao.Text = "&Báo cáo";
-            // 
-            // mnuBCHangTon
-            // 
-            this.mnuBCHangTon.Name = "mnuBCHangTon";
-            this.mnuBCHangTon.Size = new System.Drawing.Size(161, 26);
-            this.mnuBCHangTon.Text = "Hàng tồn";
-            // 
-            // mnuBCDoanhThu
-            // 
-            this.mnuBCDoanhThu.Name = "mnuBCDoanhThu";
-            this.mnuBCDoanhThu.Size = new System.Drawing.Size(161, 26);
-            this.mnuBCDoanhThu.Text = "Doanh thu";
             // 
             // mnuTroGiup
             // 
@@ -222,6 +181,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(879, 520);
             this.Controls.Add(this.toolBar);
             this.Controls.Add(this.menuStrip1);
@@ -253,11 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuHoaDonBan;
         private System.Windows.Forms.ToolStripMenuItem mnuTimKiem;
         private System.Windows.Forms.ToolStripMenuItem mnuFindHoaDon;
-        private System.Windows.Forms.ToolStripMenuItem mnuFindHang;
-        private System.Windows.Forms.ToolStripMenuItem mnuFindKhachHang;
-        private System.Windows.Forms.ToolStripMenuItem mnuBaoCao;
-        private System.Windows.Forms.ToolStripMenuItem mnuBCHangTon;
-        private System.Windows.Forms.ToolStripMenuItem mnuBCDoanhThu;
         private System.Windows.Forms.ToolStripMenuItem mnuTroGiup;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStrip toolBar;

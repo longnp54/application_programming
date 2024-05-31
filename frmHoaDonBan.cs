@@ -39,11 +39,11 @@ namespace application_programming
             txtTongTien.ReadOnly = true;
             txtGiamGia.Text = "0";
             txtTongTien.Text = "0";
-            Functions.FillCombo("SELECT MaKhach, TenKhach FROM tblKhach", cboMaKhach, "MaKhach", "TenKhach");
+            Functions.FillCombo("SELECT TenKhach, Makhach FROM tblKhach", cboMaKhach, "MaKhach", "MaKhach");
             cboMaKhach.SelectedIndex = -1;
-            Functions.FillCombo("SELECT MaNhanVien, TenNhanVien FROM tblNhanVien", cboMaNhanVien, "MaNhanVien", "TenNhanVien");
+            Functions.FillCombo("SELECT TenNhanVien, MaNhanvien FROM tblNhanVien", cboMaNhanVien, "MaNhanVien", "MaNhanVien");
             cboMaNhanVien.SelectedIndex = -1;
-            Functions.FillCombo("SELECT MaHang, TenHang FROM tblHang", cboMaHang, "MaHang", "TenHang");
+            Functions.FillCombo("SELECT TenHang, MaHang FROM tblHang", cboMaHang, "MaHang", "MaHang");
             cboMaHang.SelectedIndex = -1;
             //Hiển thị thông tin của một hóa đơn được gọi từ form tìm kiếm
             if (txtMaHDBan.Text != "")
@@ -492,7 +492,7 @@ namespace application_programming
             exRange.Range["A6:C6"].Font.Italic = true;
             exRange.Range["A6:C6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Range["A6:C6"].Value = tblThongtinHD.Rows[0][6];
-            exSheet.Name = "Hóa đơn bán hàng: ";
+            exSheet.Name = "Hoadonbanhang";
             exApp.Visible = true;
         }
 
