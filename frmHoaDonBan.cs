@@ -43,7 +43,7 @@ namespace application_programming
             cboMaKhach.SelectedIndex = -1;
             Functions.FillCombo("SELECT TenNhanVien, MaNhanvien FROM tblNhanVien", cboMaNhanVien, "MaNhanVien", "MaNhanVien");
             cboMaNhanVien.SelectedIndex = -1;
-            Functions.FillCombo("SELECT TenHang, MaHang FROM tblHang", cboMaHang, "MaHang", "MaHang");
+            Functions.FillCombo("SELECT TenHang, MaHang FROM tblHang", cboMaHang, "MaHang", "MaHang+");
             cboMaHang.SelectedIndex = -1;
             //Hiển thị thông tin của một hóa đơn được gọi từ form tìm kiếm
             if (txtMaHDBan.Text != "")
